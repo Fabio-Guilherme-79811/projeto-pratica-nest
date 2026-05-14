@@ -14,8 +14,8 @@ class User {
   public createdAt: Date;
 
   constructor({ id, name, email, password, createdAt }: UserProps) {
-    if (!email.includes('@')) throw new Error('Email inválido');
-    if (!name || name.length < 2) throw new Error('Nome muito curto');
+    if (!email.includes("@")) throw new Error("Email inválido");
+    if (!name || name.length < 2) throw new Error("Nome muito curto");
 
     this.id = id;
     this.name = name.trim();
@@ -25,7 +25,7 @@ class User {
   }
 
   isAdmin(): boolean {
-    return this.email.endsWith('@empresa.com');
+    return this.email.endsWith("@empresa.com");
   }
 }
 
